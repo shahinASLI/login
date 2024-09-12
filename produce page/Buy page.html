@@ -1,0 +1,412 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@font-face {
+    font-family: Vazir;
+    src: url(./MitraB.ttf); 
+}
+body{
+    font-family: Vazir;
+    display: flex;
+    width: 1400px;
+    height: 9000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.produce{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.06);
+    background: #faf8f8;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    width:100% ;
+    height: 385px; 
+    transition:width 0.1s ease-in 1ms ;
+    border-radius: 5px;
+}
+.produce:hover{
+    width: 100%;
+    height: 389px;
+    background-color: white;
+
+}
+.produce-information{
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    margin-right: auto;
+    margin-left: auto;
+}
+.produce-image{
+    width:calc(100% - 10px);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.produce-titr{
+    display: flex;
+    width: calc(100% - 20px);
+    height: 56px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.rotate{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    direction: ltr;
+    font-size: 12px;
+}
+.number-and-image-rotate{
+    display: flex;
+    width: 35px;
+    align-items: center;
+    margin-left: 35px;
+}
+.star-rotate{
+    width: 15px;
+}
+.price-percent{
+    width: 20px;
+    height: 15px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgb(245, 42, 42);
+    color: white;
+    font-size: 8px;
+    padding: 1px
+}
+
+.produce-price{
+    width: calc(100% - 20px);
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+}
+.past-price{
+    color: rgb(111, 111, 111, 0.7);
+    display: flex;
+    width: calc(100% - 10px);
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    direction: ltr;  
+    
+}
+.nowly-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+    font-size: 20px;
+}
+.nowly-price-and-price-percent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 10px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+}
+.past-price-text{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    text-decoration: line-through;
+    margin-left: 30px;
+ 
+}
+
+.produce-buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.buy-button{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    width: calc(100% - 3px);
+
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) ;
+    border-radius: 5px;
+}
+.buy-button:hover{
+    background-color: rgb(0, 138, 0);
+    height: 41px;
+    width: 100%;
+}
+.tooman{
+    font-size: 13px;
+}
+.salam{
+    margin-top: 0px;
+}
+.waitting-animation{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    animation: animation-waiting 0.8s infinite ease-in; 
+}
+.waitting-text{
+    font-size: 20px;
+}
+.waitting-section{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.dot-3{
+    display: flex;
+    margin-right: 2px;
+}
+.dot1{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+    margin-left: 3px;
+    animation: dot1 0.5s alternate infinite;
+}
+.dot2{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+    margin-left: 3px;
+    animation: dot2 0.5s alternate infinite 0.1s;
+}
+.dot3{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 100%;
+    margin-left: 3px;
+    animation: dot3 0.5s alternate infinite 0.2s;
+}
+@keyframes dot1{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+    }
+
+}
+@keyframes dot2{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+
+    }
+
+}
+@keyframes dot3{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+    }
+
+}
+.container{
+    width: 1200px;
+    height: auto;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
+</head>
+<body dir="rtl">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div>
+            <div class="waitting-section">
+                <div class="waitting-text"><p>منتظر خرید شما هستیم</p></div>
+                <div class="dot-3">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                    <div class="dot3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="produce salam" >
+                <div class="produce-information">
+                    <div class="produce-image">
+                        <img style="width:calc(100% - 10px); " src="./image/container/img1.jpg" alt="a">
+                    </div>
+                    <div class="produce-titr">
+                        <p style="text-align: center; padding: 0px; margin-top:0px ; text-align: right;">کابل USB-TYPE C با روکش پارچه مدل KTC-37pl</p>
+                    </div>
+                    <div class="rotate">
+                        <div class="number-and-image-rotate">
+                            <img src="./image/icons8-star-48.png" alt="star-rotate" class="star-rotate">
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="produce-price">
+                        <div class="nowly-price-and-price-percent">
+                            <div class="price-percent">
+                                <span>9%</span>
+                            </div>
+                            <div class="nowly-price">
+                                <span>169,260</span><span class="tooman">تومان</span>
+                            </div>
+                        </div>
+                        <div class="past-price">
+                            <span class="past-price-text">186,000</span>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div class="produce-buy">
+                        <button class="buy-button"><p style="font-size: 20px;">خرید</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="produce">
+                <div class="produce-information">
+                    <div class="produce-image">
+                        <img style="width:calc(100% - 10px); " src="./image/container/img2.jpg" alt="a">
+                    </div>
+                    <div class="produce-titr">
+                        <p style="text-align: center; padding: 0px; margin-top:0px ; text-align: right;">کابل AUX با روکش سیلیکون مدل LHP-2l89</p>
+                    </div>
+                    <div class="rotate">
+                        <div class="number-and-image-rotate">
+                            <img src="./image/icons8-star-48.png" alt="star-rotate" class="star-rotate">
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="produce-price">
+                        <div class="nowly-price-and-price-percent">
+                            <div class="price-percent">
+                                <span>25%</span>
+                            </div>
+                            <div class="nowly-price">
+                                <span>200,000</span><span class="tooman">تومان</span>
+                            </div>
+                        </div>
+                        <div class="past-price">
+                            <span class="past-price-text">250,000</span>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div class="produce-buy">
+                        <button class="buy-button"><p style="font-size: 20px;">خرید</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="produce">
+                <div class="produce-information">
+                    <div class="produce-image">
+                        <img style="width:calc(100% - 10px); " src="./image/container/img3.jpg" alt="a">
+                    </div>
+                    <div class="produce-titr">
+                        <p style="text-align: center; padding: 0px; margin-top:0px ; text-align: right;">مبدل USB به TYPE-C مدل baseus-MKF568</p>
+                    </div>
+                    <div class="rotate">
+                        <div class="number-and-image-rotate">
+                            <img src="./image/icons8-star-48.png" alt="star-rotate" class="star-rotate">
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="produce-price">
+                        <div class="nowly-price-and-price-percent">
+                            <div class="price-percent">
+                                <span>14%</span>
+                            </div>
+                            <div class="nowly-price">
+                                <span>217,580</span><span class="tooman">تومان</span>
+                            </div>
+                        </div>
+                        <div class="past-price">
+                            <span class="past-price-text">253,000</span>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div class="produce-buy">
+                        <button class="buy-button"><p style="font-size: 20px;">خرید</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="produce">
+                <div class="produce-information">
+                    <div class="produce-image">
+                        <img style="width:calc(100% - 10px); " src="./image/container/img4.jpg" alt="a">
+                    </div>
+                    <div class="produce-titr">
+                        <p style="text-align: center; padding: 0px; margin-top:0px ; text-align: right;">شارژر جا سیگاری مدل baseus-KMV457</p>
+                    </div>
+                    <div class="rotate">
+                        <div class="number-and-image-rotate">
+                            <img src="./image/icons8-star-48.png" alt="star-rotate" class="star-rotate">
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="produce-price">
+                        <div class="nowly-price-and-price-percent">
+                            <div class="price-percent">
+                                <span>10%</span>
+                            </div>
+                            <div class="nowly-price">
+                                <span>106,200</span><span class="tooman">تومان</span>
+                            </div>
+                        </div>
+                        <div class="past-price">
+                            <span class="past-price-text">118,000</span>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div class="produce-buy">
+                        <button class="buy-button"><p style="font-size: 20px;">خرید</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    
+    </div>
+</body>
+</html>

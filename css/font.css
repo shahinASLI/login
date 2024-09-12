@@ -1,0 +1,7 @@
+@font-face{
+    font-family:"Independence";
+    src: url(../fonts/Independence.otf);
+}
+* , *::after , *::before{
+    font-family:Independence;
+}
